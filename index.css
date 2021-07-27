@@ -1,9 +1,114 @@
+:root {
+	--b-phone: #CCEFFF;
+	--border-phone: black;
+	--b-rabbit: white;
+	--b-mountain: brown;
+	--b-bush: green;
+}
 body {
 	counter-reset: game;
+	display: grid;
+	height: 100vh;
+	margin: 0;
+	place-items: center;
+	width: 100%;
+}
+.phone {
+	background-color: var(--b-phone);
+	border: 8px solid var(--border-phone);
+	border-radius: 40px;
+	box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+	height: 600px;
+	position: relative;
+	width: 300px;
 }
 .check:checked {
 	counter-increment: game;
 }
 .count::after {
 	content: counter(game);
+}
+
+.rabbit {
+	position: absolute;
+	width: 50px;
+	background-color: var(--b-rabbit);
+	opacity: 0.5;
+}
+.ear__outer {
+	background-color: var(--b-rabbit);
+	height: 40px;
+	width: 15px;
+}
+.mountain {
+	background-color: var(--b-mountain);
+	border: 1px solid black;
+	position: absolute;
+}
+.bush {
+	background-color: var(--b-bush);
+	height: 75px;
+	position: absolute;
+	width: 200px;
+}
+.cloud {
+	background-color: var(--b-rabbit);
+	height: 70px;
+	position: absolute;
+	width: 110px;
+}
+
+.layer-1 {
+	height: 420px;
+	bottom: 0;
+	right: 90px;
+}
+.layer-2 {
+	height: 420px;
+	bottom: 0;
+	left: 90px;
+}
+.layer-3 {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 375px;
+	width: 220px;
+}
+.layer-4 {
+	bottom: 0;
+	height: 295px;
+	left: 60px;
+}
+.layer-5 {
+	bottom: 0;
+	height: 270px;
+	left: 0;
+	width: 200px;
+}
+.layer-6 {
+	bottom: 0;
+	height: 200px;
+	right: 45px;
+}
+.layer-7 {
+	bottom: 0;
+	height: 175px;
+	right: 0;
+	width: 200px;
+}
+.layer-8 {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+}
+.layer-9 {
+	bottom: 0;
+	right: 0;
+}
+.layer-10 {
+	bottom: 0;
+	left: 0;
 }
