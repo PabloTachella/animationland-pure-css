@@ -2,7 +2,8 @@
 	--b-phone: #CCEFFF;
 	--border-phone: black;
 	--b-rabbit: white;
-	--b-mountain: brown;
+	--b-mountain: chocolate;
+	--b-mountain-shadow: brown;
 	--b-bush: green;
 	--ear-inner: pink;
 }
@@ -79,17 +80,44 @@ body {
 	width: 2px;
 }
 
+/* ----------- mountain ----------- */
 .mountain {
 	background-color: var(--b-mountain);
-	border: 1px solid black;
+	border-radius: 20px 20px 0 0;
+	box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
 	position: absolute;
 }
+.mountain-zigzag {
+	margin-top: 15px;
+	display: grid;
+	height: 35px;
+	overflow: hidden;
+	grid-template-columns: repeat(15, 15px);
+}
+.mountain-zigzag_descent {
+	background: linear-gradient(45deg, transparent 0 35%, var(--b-mountain-shadow) 35% 60%, var(--b-bush) 60% 100%);
+}
+.mountain-zigzag_ascent {
+	background: linear-gradient(-45deg, transparent 0 35%, var(--b-mountain-shadow) 35% 60%, var(--b-bush) 60% 100%);
+}
+.grass {
+	position: absolute;
+	background-color: var(--b-bush);
+	border-radius: inherit;
+	width: inherit;
+	height: 15px;
+	top: 0;
+}
+
+/* ----------- bush ----------- */
 .bush {
 	background-color: var(--b-bush);
 	height: 75px;
 	position: absolute;
 	width: 200px;
 }
+
+/* ----------- cloud ----------- */
 .cloud {
 	background-color: var(--b-rabbit);
 	height: 70px;
