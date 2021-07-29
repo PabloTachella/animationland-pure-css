@@ -34,9 +34,8 @@ body {
 	cursor: pointer;
 	position: absolute;
 	height: 40px;
-	top: 10px;
 	width: 60px;
-	z-index: 2;
+	z-index: 4;
 }
 .check:checked {
 	counter-increment: game;
