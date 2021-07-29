@@ -24,6 +24,20 @@ body {
 	position: relative;
 	width: 300px;
 }
+.header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.rabbit input[type=checkbox] {
+	appearance: none;
+	cursor: pointer;
+	position: absolute;
+	height: 40px;
+	top: 10px;
+	width: 60px;
+	z-index: 2;
+}
 .check:checked {
 	counter-increment: game;
 }
